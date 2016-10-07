@@ -7,8 +7,14 @@
 </ion-header>
 
 <ion-content padding>
-  <p>
   The world is your oyster.
-  </p>
+  <br><br>
+
   <button ion-button [navPush]="aboutPage">Go To About</button>
+
+  <button ion-button (click)="takePicture()">Take a Picture</button>
+
+  <br><br>
+  Latest Picture:
+  <img [src]="base64Image" *ngIf="base64Image" />
 </ion-content>
